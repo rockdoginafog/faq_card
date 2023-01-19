@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root{
+    --soft-red: hsl(14, 88%, 65%);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Kumbh Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 100vw;
+    background: rgb(175,103,233);
+    background: linear-gradient(90deg, rgba(175,103,233,1) 0%, rgba(101,101,231,1) 100%);
+}
+
+.hero{
+    background-color: white;
+    background-image: url('images/bg-pattern-desktop.svg');
+    display: flex;
+    border-radius: 2em;
+    padding: 1em;
+    justify-content: center;
+    align-items: center;
+}
+
+.woman_and_box{
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+}
+
+.woman{
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.woman_img{
+    width: 450px;
+    height: 400px;
+}
+
+.box{
+    position: absolute;
+    top: 180px;
+}
+
+.container{
+    display: flex;
+}
+
+.hidden{
+    display: none;
+}
+
+.rotate{
+    transform: rotate(180deg);
+}
+
+.question{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.question_container{
+    width: 350px;
+    font-family: 'Kumbh Sans', sans-serif;
+    border: navajowhite;
+    background: none;
+    border-bottom: 1px solid black;
+    font-size: 1em;
+}
+
+.question_container:hover{
+    color: var(--soft-red);
+}
+
+.question_container:focus{
+    font-weight: bold;
+}
+
+.answer{
+    max-width: 350px;
+    opacity: 0.7;
+    font-size: 1em;
+    margin-top: 1em;
+}
+
+.question_and_answer_container{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 2em;
+}
+
+@media (max-width: 1000px) {
+
+    .hero{
+        flex-direction: column;
+    }
+
+    .woman_img{
+        max-width: 300px;
+        max-height: 250px;
+    }
+
+    .box_img{
+        max-width: 100px;
+    }
+
+    .box{
+        top: 120px;
+    }
+
+}
+
+@media (max-width: 425px) {
+
+    .woman_img{
+        width: 200px;
+        height: 150px;
+    }
+
+    .hero{
+        width: 300px;
+    }
+
+    .box_img{
+        max-width: 60px;
+    }
+
+    .box{
+        top: 80px;
+        right: 160px;
+    }
+
+    .question_and_answer_container{
+        width: 300px;
+    }
+
+    .question{
+        justify-content:space-between;
+    }
+
+    .content{
+        font-size: 0.9em;
+    }
+
+    .question_container{
+        width: 300px;
+    }
+}
